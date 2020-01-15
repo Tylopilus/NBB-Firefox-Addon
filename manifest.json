@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "NBB-Backend-PIMS",
+	"version": "1.0.2",
+	"author": "Helge Ahrens",
+	"description": "Allows you to right click on a product detail page and jump directly to the products backend page",
+
+	"icons": {
+		"16": "icons/nbb16.png"
+	},
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"content_scripts": [{
+		"matches": ["*://*.notebooksbilliger.de/*"],
+		"js": ["main.js"]
+	}],
+
+	"permissions": [
+		"contextMenus",
+		"menus",
+		"tabs",
+		"activeTab"
+	]
+}
